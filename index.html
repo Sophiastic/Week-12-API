@@ -1,0 +1,82 @@
+<!--The goal is to create a form that is preloaded with titles that can then be cleared when I'm done reading them ........... in 20 years.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body
+    background="books.jpg"
+    alt="light green background with white outline drawing of an open book"
+    width="auto"
+    height="auto"
+  >
+    <h1>Books to Read!</h1>
+    <!--where more books will be added this top portion is all for the form-->
+    <div class="container">
+      <div class="card rounded-top">
+        <div class="card-body">
+          <form id="bookForm">
+            <p>What book's next?</p>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <!--each part will have its own line, title, genre, author-->
+                  <label for="title" class="form-label">Book Title</label>
+                  <input type="text" class="form-control" id="title" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="genre" class="form-label">Genre</label>
+                  <input type="text" class="form-control" id="genre" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="author" class="form-label">Author</label>
+                  <input type="text" class="form-control" id="author" />
+                </div>
+              </div>
+            </div>
+            <button id="add-book" type="submit" class="btn btn-dark mt-2">
+              Add Book
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!--this should hold all of the books currently on my list and then be able to delete them once they've been read-->
+      <div class="d-flex flex-column">
+        <div id="books-container" class="center">
+          <button id="render-books" class="btn btn-dark mt-2 center mb-2">
+            Show Book List
+          </button>
+          <table class="table table-striped-columns center" id="table">
+            <thead class="table-dark">
+              <tr>
+                <th id="book">Book</th>
+                <th id="genre">Genre</th>
+                <th id="author">Author</th>
+                <th id="read">Read it!</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

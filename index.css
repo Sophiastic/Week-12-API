@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+  margin: 2rem;
+  font-family: "Gill Sans";
+}
+.container {
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  background-color: rgb(82, 141, 37);
+  padding: 2rem;
+}
+.card-body {
+  background-color: rgba(181, 201, 171, 0.856);
+}
+
+#render-books {
+  margin-left: 90px;
+}
+
+.flex-column {
+  width: auto;
+  margin: auto;
+  padding: auto;
+}
